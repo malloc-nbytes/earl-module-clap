@@ -1,13 +1,19 @@
-module Main
+module Clap
 
-# Make sure the read the docs!
-# https://github.com/malloc-nbytes/EARL/blob/main/EARL-language-reference.html
-
-# Imports go here...
-
-fn main() {
-    println("Hello EARL!");
-    return 0;
+@pub class Arg [lx, hyphens] {
+    @pub let lx = lx;
+    @pub let hyphens = hyphens;
 }
 
-main();
+@pub fn parse(args: list): list {
+    let res = [];
+
+    foreach arg in args {
+        if arg[0] != '-' {
+            res.append(Arg(arg, 0));
+        }
+    }
+
+    return res;
+}
+
