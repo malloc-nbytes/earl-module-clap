@@ -1,0 +1,6 @@
+[owner]
+name = "malloc-nbytes"
+github = "github.com/my-repo"
+
+[config]
+prefix = "clap"
