@@ -119,9 +119,3 @@ fn parse(args: list): list {
 
     return res;
 }
-
-let args = ["--help", "-h", "-cw", "foo", "-", "--output=stdout"];
-foreach a in parse(args) {
-    println(a.get_actual());
-}
-
