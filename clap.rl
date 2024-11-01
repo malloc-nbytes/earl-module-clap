@@ -1,7 +1,7 @@
 module Clap
 
-import "std/str.earl";
-import "std/utils.earl";
+import "std/str.rl";
+import "std/utils.rl";
 
 enum ArgTy {
     TwoHyph = 1 << Utils::iota(),
