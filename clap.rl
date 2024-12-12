@@ -1,6 +1,6 @@
 module Clap
 
-import "std/str.rl";
+import "std/datatypes/str.rl";
 import "std/utils.rl";
 
 enum ArgTy {
