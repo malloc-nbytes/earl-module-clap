@@ -11,10 +11,11 @@ enum ArgTy {
     Invalid = 1 << Utils::iota(),
 }
 
+### Class
 #-- Name: Arg
-#-- Param: lx: str
-#-- Param: ty: int
-#-- Param: eq: option<str>
+#-- Parameter: lx: str
+#-- Parameter: ty: int
+#-- Parameter: eq: option<str>
 #-- Description:
 #--   A class that represents a CLI argument.
 #--   Takes `lx` (literal), `ty` (type), and `eq` (rhs of assignment).
@@ -60,6 +61,7 @@ class Arg [lx: str, ty: int, eq: option] {
         return s;
     }
 }
+### End
 
 fn determine_eq(@const @ref s) {
     let idx = Str::find(s, '=');
@@ -75,6 +77,7 @@ fn determine_eq(@const @ref s) {
     return none;
 }
 
+### Function
 #-- Name: parse
 #-- Param: args: list<str>
 #-- Returns: list<Arg>
@@ -119,3 +122,4 @@ fn parse(args: list): list {
 
     return res;
 }
+### End
